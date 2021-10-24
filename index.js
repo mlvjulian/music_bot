@@ -9,7 +9,7 @@ app.listen(port)
  
 require('dotenv').config()
 
-
+const mySecret = process.env['TOKEN']
 const Discord = require('discord.js');
 const DisTube = require("distube")
 const SoundCloudPlugin = require('@distube/soundcloud')
@@ -34,7 +34,7 @@ client.on("ready", () => {
 });
 
 
-client.login("OTAwMjA1MDc1MzQ2MTAwMzA4.YW97Tg.w0ppyE-OyqRMeHtdzzA53X6tNlA");
+client.login(mySecret);
 
 const distube = new DisTube.default(client, {
 	searchSongs: 1,
