@@ -1,0 +1,33 @@
+client.distube = new DisTube(client, {
+  emitNewSongonly: true,
+  searchSongs: false,
+  leaveOnStop: true,
+  leaveOnFinish: true,
+  leaveOnEmpty: true
+});
+
+client.distube.on("addList", (message, queue, playList) => message.channel.send(`Playlist: **${playlist.name}**`))
+
+client.distube.on("addSong", (message, queue, song) => {
+  message.channel.send(`Cancion añadida: **${song.name}** - **${song.formattedDuration}**`)
+})
+
+client.distube.on("playSong", (message, queue, playSong) => {
+  message.channel.send(`Reproduciendo ahora: **${playsong.name}** - **${playsong.formattedDuration}**`)
+})
+
+client.distube.on("playList", (message, playlist) => {
+  message.channel.send(`Reproduciendo playlist: **${playlist.name}**`)
+})
+
+client.distube.on("error", (message, error) => {
+  console.log(error)
+})
+
+
+client.on("message", (message) => {
+  if (message.content.startsWith("ping")) {
+    message.channel.send("pong!");
+  }
+
+});

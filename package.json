@@ -1,7 +1,6 @@
 {
   "name": "uwu-bt",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,8 +9,26 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@discordjs/opus": "^0.6.0",
+    "@discordjs/voice": "^0.6.0",
+    "@distube/soundcloud": "^1.0.0",
+    "@distube/spotify": "^1.0.0",
+    "@distube/youtube-dl": "^2.2.4",
+    "avconv": "^3.1.0",
+    "discord-player-music": "^1.1.6",
     "discord.js": "^13.2.0",
+    "discord.js-commando": "^0.12.3",
+    "distube": "^3.0.1",
     "dotenv": "^10.0.0",
-    "node": "^17.0.1"
-  }
+    "events": "^3.3.0",
+    "express": "^4.17.1",
+    "ffmpeg": "0.0.4",
+    "ffmpeg-static": "^4.4.0",
+    "node": "^17.0.1",
+    "node-events": "0.0.2",
+    "opus": "0.0.0",
+    "resolve": "^1.20.0"
+  },
+  "devDependencies": {},
+  "description": ""
 }
